@@ -1,0 +1,14 @@
+{
+  "name": "reclip-io-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runnable REST examples for the Reclip public API",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node scripts/validate.mjs",
+    "test:live": "node scripts/verify-live.mjs"
+  }
+}
