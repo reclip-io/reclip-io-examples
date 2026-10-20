@@ -2,11 +2,11 @@
 
 Runnable examples for the Reclip REST API, organized like [glade-api-examples](https://github.com/ricciflow-api/glade-api-examples). Learn workspace authentication, tool discovery, uploads, quotes, durable job submission, polling, downloads, and media-tool composition.
 
-**Beta contract:** `1.0.0-beta.1`, backend [`api-dev` at `2059685`](https://github.com/asterism-software/reclip-io/tree/2059685938ec59f5277269b2ca73b723253be45d). These are client examples. The operator must deploy and enable the API; publishing this repository does not enable production access. Offline tests do not certify live provider execution.
+**Beta contract:** `1.0.0-beta.2`, the latest local `api-dev` contract recorded in the bundled catalog source metadata. These are client examples. The operator must deploy and enable the API; publishing this repository does not enable production access. Offline tests do not certify live provider execution.
 
 ## Quick start
 
-An administrator of an eligible paid workspace creates a scoped key in Settings → API Keys on the API-enabled deployment. Supply `RECLIP_API_KEY` through your shell environment or secret manager. Do not paste it into chat, source code, or command arguments. The examples do not automatically load `.env`.
+An administrator of an eligible paid workspace creates a scoped key in the API dashboard → API Keys on the API-enabled deployment. Supply `RECLIP_API_KEY` through your shell environment or secret manager. Do not paste it into chat, source code, or command arguments. The examples do not automatically load `.env`.
 
 Read the current identity:
 
@@ -61,9 +61,9 @@ go run .
 - [Upload, quote, submit, wait and download](docs/quickstart.md)
 - [Retries, state files and credit budgets](docs/retries-and-budgets.md)
 - [Tool chaining, clips and exports](docs/workflows.md)
-- [24-tool coverage and input schema index](docs/tools.md)
+- [30-tool coverage and input schema index](docs/tools.md)
 
-Examples consistently use `Authorization: Bearer`. `RECLIP_API_BASE_URL` defaults to `https://www.reclip.io/api/v1`; configure a different trusted deployment if needed. HTTPS is required except for loopback development. Reclip beta provides REST; there are no GraphQL or MCP examples because those interfaces are not part of this contract.
+Examples consistently use `Authorization: Bearer`. `RECLIP_API_BASE_URL` defaults to `https://www.reclip.io/api/v1`; configure a different trusted deployment if needed. HTTPS is required except for loopback development. Reclip beta provides REST and Streamable HTTP MCP at `/api/mcp`. The MCP catalog is generated from the same tool and OpenAPI schemas.
 
 ## Validate
 
@@ -85,8 +85,8 @@ This requires a configured key and checks identity, tools and usage. It does not
 
 ## Related repositories
 
-- [API documentation](https://github.com/ricciflow-api/reclip-io-api-docs)
-- [Agent skill](https://github.com/ricciflow-api/reclip-io-skills)
+- [API documentation](https://github.com/reclip-io/reclip-io-api-docs)
+- [Agent skill](https://github.com/reclip-io/reclip-io-skills)
 - [Backend API branch](https://github.com/asterism-software/reclip-io/tree/api-dev)
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), and the [MIT license](LICENSE).

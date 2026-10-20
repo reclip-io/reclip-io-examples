@@ -29,7 +29,7 @@ export function client(env = process.env, fetcher = fetch) {
     async call(method, path, body, idempotency, timeout = 30000) {
       if (!routes[method]?.test(path)) throw new Error('Unsupported example endpoint.');
       const data = body === undefined ? undefined : JSON.stringify(body);
-      if (data && Buffer.byteLength(data) > 256 * 1024) throw new Error('Request exceeds 256 KiB.');
+      if (data && Buffer.byteLength(data) > 1536 * 1024) throw new Error('Request exceeds 1.5 MiB.');
       if (path === '/jobs' && (!idempotency || !/^[A-Za-z0-9:_-]{8,160}$/.test(idempotency))) throw new Error('Saved idempotency key required.');
       const headers = { Authorization: `Bearer ${key}`, Accept: 'application/json' };
       if (data) headers['Content-Type'] = 'application/json';
@@ -76,7 +76,7 @@ function canonical(value) {
 }
 export async function readRequest(path, cap) {
   const text = await readFile(path, 'utf8');
-  if (Buffer.byteLength(text) > 256 * 1024) throw new Error('Request exceeds 256 KiB.');
+  if (Buffer.byteLength(text) > 1536 * 1024) throw new Error('Request exceeds 1.5 MiB.');
   let body;
   try { body = JSON.parse(text); } catch { throw new Error('Invalid request JSON.'); }
   if (!body || typeof body !== 'object' || Array.isArray(body) || !body.tool || !body.input) throw new Error('Expected a job object with tool and input.');

@@ -1,8 +1,8 @@
 {
   "name": "reclip-io-examples",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Runnable REST examples for the Reclip public API",
+  "description": "Runnable REST and MCP examples for every Reclip tool",
   "license": "MIT",
   "engines": {
     "node": ">=20"

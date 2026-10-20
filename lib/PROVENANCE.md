@@ -1,7 +1,7 @@
 # Client provenance
 
-`reclip/scripts/reclip_api.py`, the two reference JSON files, and the baseline Python client tests are vendored from [reclip-io-skills](https://github.com/ricciflow-api/reclip-io-skills/tree/b3026c51a34dce41d8767027f146c299561d2c9e), under its MIT license (Copyright 2026 Reclip). The client and JSON are unchanged; test discovery points to this repository's client path. This avoids requiring a separate skill installation or a package that has not been published.
+`reclip/scripts/reclip_api.py`, the reference JSON files, and the baseline Python client tests are vendored from the current local `reclip-io-skills` release 1.1.0 under its MIT license (Copyright 2026 Reclip). The integration exporter synchronizes the client and snapshots; test discovery points to this repository's client path. This avoids requiring a separate skill installation or an unpublished package.
 
-The snapshots derive from backend `api-dev` commit `2059685938ec59f5277269b2ca73b723253be45d`, API version `1.0.0-beta.1`. New example workflows and the Node/Go/cURL implementations are local to this repository. The Glade examples repository provided the language/documentation structure, not Reclip endpoint contracts.
+The snapshots derive from the current local `reclip-io` `api-dev` contract, API version `1.0.0-beta.2`. Their source metadata records the base commit, merged main revision, working-tree marker, full tool inventory and contract SHA-256. Uncommitted changes are identified as a working-tree snapshot rather than attributed to a published commit.
 
-For upgrades, vendor from an explicit skill commit, compare the runtime and snapshots, rerun all behavioral tests, and update this record. This is an example helper, not a separately published official SDK.
+Run the backend's `scripts/export-public-integrations.mjs` after contract changes and verify it with `--check`. Update client behavior and tests together. Node/Go/cURL implementations remain maintained in this repository. This helper is not a separately published official SDK.

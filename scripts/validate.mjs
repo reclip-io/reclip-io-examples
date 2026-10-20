@@ -28,7 +28,7 @@ for (const file of files) {
 }
 const catalog = JSON.parse(readFileSync(join(root, 'lib/reclip/references/tool-catalog.json')));
 const operations = JSON.parse(readFileSync(join(root, 'lib/reclip/references/operations.json')));
-if (catalog.tools.length !== 24 || operations.operations.length !== 23 || catalog.source.commit !== operations.source.commit) throw new Error('Inconsistent API snapshots');
+if (JSON.stringify(catalog.source) !== JSON.stringify(operations.source) || JSON.stringify(catalog.tools.map(t => t.id).sort()) !== JSON.stringify([...catalog.source.tool_codes].sort()) || new Set(operations.operations.map(o => `${o.method} ${o.path}`)).size !== operations.operations.length) throw new Error('Inconsistent API snapshots');
 for (const route of ['GET /me', 'GET /tools', 'GET /usage', 'POST /jobs/quote', 'POST /jobs', 'GET /jobs/{id}']) {
   if (!operations.operations.some(o => `${o.method} ${o.path}` === route)) throw new Error(`Missing contract route ${route}`);
 }
