@@ -34,5 +34,5 @@ for (const route of ['GET /me', 'GET /tools', 'GET /usage', 'POST /jobs/quote', 
 }
 run('python3', ['-m', 'compileall', '-q', 'examples/python', 'lib', 'tests']);
 run('python3', ['-m', 'unittest', 'discover', '-s', 'tests', '-v']);
-run(process.execPath, ['--test', 'tests/node.test.mjs']);
+run(process.execPath, ['--test', 'tests/node.test.mjs', 'tests/platforms.test.mjs']);
 console.log('Offline examples, language syntax, links and pinned API references passed. Go tests run separately in CI.');

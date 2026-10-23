@@ -36,3 +36,5 @@ All 30 product tools are covered by REST, MCP and the skill client. Read live ca
 | `transcription`                 | Transcription                 | `asset_id`, `file_name`, `duration_seconds`, `include_timestamps`                                                                                                                                                                                                                                                                                 |
 
 Quote the exact request before submission. `clip_discovery` returns structured recommendations; Gemini tools return PNG assets and honest per-image removal status. B-Roll reuses the existing approved deployment tariff shared with the browser.
+
+For verified platform URL inputs, see the [platform API examples](platforms.md). Those ten examples specialize existing tool contracts; the product catalog remains 30 tools.

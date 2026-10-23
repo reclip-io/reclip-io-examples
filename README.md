@@ -6,7 +6,7 @@ Runnable examples for the Reclip REST API, organized like [glade-api-examples](h
 
 ## Quick start
 
-An administrator of an eligible paid workspace creates a scoped key in the API dashboard → API Keys on the API-enabled deployment. Supply `RECLIP_API_KEY` through your shell environment or secret manager. Do not paste it into chat, source code, or command arguments. The examples do not automatically load `.env`.
+Create a scoped workspace key in the API dashboard → API Keys on the API-enabled deployment. API access can use eligible promotional API credits, purchased credits, or a paid plan. Supply `RECLIP_API_KEY` through your shell environment or secret manager. Do not paste it into chat, source code, or command arguments. The examples do not automatically load `.env`.
 
 Read the current identity:
 
@@ -29,7 +29,7 @@ python3 examples/python/02_convert.py source.mp4 \
   --output output/audio.mp3
 ```
 
-This example deliberately permits **zero credits**; the pinned contract marks extraction as free, while API access still requires paid eligibility. If the live quote exceeds zero, the client stops. Choose a higher cap only within your intended budget. Use the same state directory, file, key, and arguments to resume an interrupted run.
+This example deliberately permits **zero credits**; the pinned contract marks extraction as free, while workspace API access requirements still apply. If the live quote exceeds zero, the client stops. Choose a higher cap only within your intended budget. Use the same state directory, file, key, and arguments to resume an interrupted run.
 
 ## Examples
 
@@ -39,6 +39,8 @@ This example deliberately permits **zero credits**; the pinned contract marks ex
 | Python | Discovery; upload → extract → download; compression → audio chain; full API helper | Python 3.9+ standard library |
 | Node.js | Discovery, quote, durable submit, bounded polling | Node.js 20+ built-ins |
 | Go | Read-only identity, tools, usage | Go 1.23+ standard library |
+
+For YouTube, TikTok, Instagram, and Twitch VOD source URLs, use the [10 platform-specific request examples](docs/platforms.md). The offline Node selector prepares a matching request without network access; the existing clients handle quoting, durable submission, and polling.
 
 Node accepts a JSON request with a ready asset from the Python uploader:
 
@@ -62,6 +64,7 @@ go run .
 - [Retries, state files and credit budgets](docs/retries-and-budgets.md)
 - [Tool chaining, clips and exports](docs/workflows.md)
 - [30-tool coverage and input schema index](docs/tools.md)
+- [YouTube, TikTok, Instagram, and Twitch API examples](docs/platforms.md)
 
 Examples consistently use `Authorization: Bearer`. `RECLIP_API_BASE_URL` defaults to `https://www.reclip.io/api/v1`; configure a different trusted deployment if needed. HTTPS is required except for loopback development. Reclip beta provides REST and Streamable HTTP MCP at `/api/mcp`. The MCP catalog is generated from the same tool and OpenAPI schemas.
 

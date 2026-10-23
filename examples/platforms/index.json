@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "guides": [
+    {
+      "slug": "youtube-video-downloader",
+      "title": "YouTube Video Downloader API",
+      "platform": "youtube",
+      "tool": "video_downloader",
+      "request_file": "youtube-video-downloader.json",
+      "landing_url": "https://www.reclip.io/api/tools/youtube-video-downloader",
+      "docs_url": "https://www.reclip.io/docs/platforms/youtube-video-downloader"
+    },
+    {
+      "slug": "tiktok-video-downloader",
+      "title": "TikTok Video Downloader API",
+      "platform": "tiktok",
+      "tool": "video_downloader",
+      "request_file": "tiktok-video-downloader.json",
+      "landing_url": "https://www.reclip.io/api/tools/tiktok-video-downloader",
+      "docs_url": "https://www.reclip.io/docs/platforms/tiktok-video-downloader"
+    },
+    {
+      "slug": "instagram-video-downloader",
+      "title": "Instagram Video Downloader API",
+      "platform": "instagram",
+      "tool": "video_downloader",
+      "request_file": "instagram-video-downloader.json",
+      "landing_url": "https://www.reclip.io/api/tools/instagram-video-downloader",
+      "docs_url": "https://www.reclip.io/docs/platforms/instagram-video-downloader"
+    },
+    {
+      "slug": "youtube-ai-clipper",
+      "title": "YouTube Video Clipping API",
+      "platform": "youtube",
+      "tool": "ai_clipper",
+      "request_file": "youtube-ai-clipper.json",
+      "landing_url": "https://www.reclip.io/api/tools/youtube-ai-clipper",
+      "docs_url": "https://www.reclip.io/docs/platforms/youtube-ai-clipper"
+    },
+    {
+      "slug": "twitch-vod-clipper",
+      "title": "Twitch VOD Clipping API",
+      "platform": "twitch",
+      "tool": "ai_clipper",
+      "request_file": "twitch-vod-clipper.json",
+      "landing_url": "https://www.reclip.io/api/tools/twitch-vod-clipper",
+      "docs_url": "https://www.reclip.io/docs/platforms/twitch-vod-clipper"
+    },
+    {
+      "slug": "youtube-ai-broll",
+      "title": "YouTube AI B-Roll API",
+      "platform": "youtube",
+      "tool": "ai_broll",
+      "request_file": "youtube-ai-broll.json",
+      "landing_url": "https://www.reclip.io/api/tools/youtube-ai-broll",
+      "docs_url": "https://www.reclip.io/docs/platforms/youtube-ai-broll"
+    },
+    {
+      "slug": "twitch-vod-ai-broll",
+      "title": "Twitch VOD AI B-Roll API",
+      "platform": "twitch",
+      "tool": "ai_broll",
+      "request_file": "twitch-vod-ai-broll.json",
+      "landing_url": "https://www.reclip.io/api/tools/twitch-vod-ai-broll",
+      "docs_url": "https://www.reclip.io/docs/platforms/twitch-vod-ai-broll"
+    },
+    {
+      "slug": "youtube-ai-captions",
+      "title": "YouTube Video Captions API",
+      "platform": "youtube",
+      "tool": "ai_captions",
+      "request_file": "youtube-ai-captions.json",
+      "landing_url": "https://www.reclip.io/api/tools/youtube-ai-captions",
+      "docs_url": "https://www.reclip.io/docs/platforms/youtube-ai-captions"
+    },
+    {
+      "slug": "youtube-transcript",
+      "title": "YouTube Transcript API",
+      "platform": "youtube",
+      "tool": "youtube_transcript",
+      "request_file": "youtube-transcript.json",
+      "landing_url": "https://www.reclip.io/api/tools/youtube-transcript",
+      "docs_url": "https://www.reclip.io/docs/tools/youtube-transcript"
+    },
+    {
+      "slug": "tiktok-transcript",
+      "title": "TikTok Transcript API",
+      "platform": "tiktok",
+      "tool": "tiktok_transcript",
+      "request_file": "tiktok-transcript.json",
+      "landing_url": "https://www.reclip.io/api/tools/tiktok-transcript",
+      "docs_url": "https://www.reclip.io/docs/tools/tiktok-transcript"
+    }
+  ]
+}
